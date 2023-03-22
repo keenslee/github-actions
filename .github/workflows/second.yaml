@@ -2,7 +2,7 @@ on:
   - push
 
 jobs:
-  run-shell-commands:
+  terraform-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -13,6 +13,8 @@ jobs:
           terraform_version: 1.1.9
       - name: terraform init
         run: terraform init
+      - name: terraform validate
+        run: terraform validate
       - name: Multi line string
         run: |
           pwd
