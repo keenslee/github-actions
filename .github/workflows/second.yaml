@@ -8,13 +8,15 @@ jobs:
       - name: Checkout
         uses: actions/Checkout@v1
       - name: set Terraform
-        uses: hasicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.1.9
       - name: terraform init
         run: terraform init
-      - name: terraform validate
+      - name: terraform-validate
         run: terraform validate
+      - name: terraform-plan
+        run: terraform plan
       - name: Multi line string
         run: |
           pwd
