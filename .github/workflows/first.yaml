@@ -19,7 +19,7 @@ jobs:
         shell: python
   run-windows-commands:
     runs-on: windows-latest
-      steps:
-        - name: Directory
-          run: pwd
-          shell: bash
+    steps:
+      - name: Directory
+        run: pwd
+        shell: bash
